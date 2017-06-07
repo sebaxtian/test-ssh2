@@ -14,6 +14,8 @@ conn.on('ready', function() {
       console.log('STDERR: ' + data);
     });
   });
+}).on('error', function(err) {
+    console.log('Client :: deny');
 }).connect({
   host: '192.168.88.7',
   port: 22,
